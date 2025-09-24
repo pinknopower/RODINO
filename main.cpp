@@ -242,7 +242,7 @@ bool connectToServer() {
 void setup() {
   Serial.begin(115200);
   Serial.println("device online");
-  BLEDevice::init("MyESP32");
+  BLEDevice::init("Rodino smart light");
   pServer = BLEDevice::createServer();
   pServer->setCallbacks(new MyServerCallbacks());
   BLEService *pService = pServer->createService(SERVICE_UUID);
@@ -557,4 +557,5 @@ void loop()
   }
   timer2++;
   timer3++;
+
 }
